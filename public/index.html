@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .custom-max-width {
+      max-width: 50rem;
+    }
+    .bg{
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 p-6 bg">
+  <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 custom-max-width">
+    <h1 class="text-2xl font-bold mb-4">Todo List</h1>
+    <form id="todo-form" class="flex mb-4">
+      <input type="text" id="todo-input" placeholder="Enter your task..."
+        class="flex-grow p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
+        required />
+      <select id="priority-select" class="ml-2 p-2 border border-gray-300 rounded-md shadow-sm">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input type="date" id="due-date" class="ml-2 p-2 border border-gray-300 rounded-md shadow-sm">
+      <button type="submit" class="ml-2 p-2 bg-blue-500 text-white rounded-md">Add Task</button>
+    </form>
+    <ul id="todo-list" class="list-none space-y-2"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
